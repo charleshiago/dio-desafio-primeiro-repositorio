@@ -1,1 +1,19 @@
-Git é um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software, mas pode ser usado para registrar o histórico de edições de qualquer tipo de arquivo.
+Git é um sistema de controle de versões distribuído,
+usado principalmente no desenvolvimento de software, 
+mas pode ser usado para registrar o histórico de edições 
+de qualquer tipo de arquivo.
+
+Link para donwload do Git: https://git-scm.com/downloads
+
+Principais Operações:
+CLONE - copia o repositório remoto para seu computador
+PULL  - atualiza seu repositório local em relação ao repositório remoto
+COMMIT - salva uma nova versão (tipicamente no seu repositório local)
+PUSH - envia o repositório local para o repositório remoto
+
+Comandos úteis:
+git init - inicia um novo repositório local na pasta do seu projeto
+git status  - erifica arquivos
+git add .  - adiciona todos arquivos ao stage
+git commit -m "Projeto criado" - salva uma nova versão do projeto
+git push -u origin master {nota: nas próximas vezes basta fazer: git push} - envia o repositório local para o repositório remoto
