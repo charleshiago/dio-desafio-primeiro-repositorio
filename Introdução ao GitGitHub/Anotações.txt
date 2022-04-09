@@ -12,8 +12,88 @@ COMMIT - salva uma nova versão (tipicamente no seu repositório local)
 PUSH - envia o repositório local para o repositório remoto
 
 Comandos úteis:
-git init - inicia um novo repositório local na pasta do seu projeto
-git status  - erifica arquivos
-git add .  - adiciona todos arquivos ao stage
-git commit -m "Projeto criado" - salva uma nova versão do projeto
-git push -u origin master {nota: nas próximas vezes basta fazer: git push} - envia o repositório local para o repositório remoto
+
+Criação
+git clone - copiar um repositório
+git init - cria um novo repositório local
+
+Mudanças locais
+git status - arquivos alterados em seu diretório de trabalho
+git diff - mudanças em arquivos rastreados
+git add . - adicione todas as mudanças atuais para o próximo commit
+git add . -p <file> - adicione algumas mudanças <file> para o próximo commit
+git commit -a - confirmar todas as alterações locais em arquivos rastreados
+git commit - confirmar alterações previamente preparadas
+git commit --amend - mude o último commit
+
+Histórico
+git log - mostrar todos os commits, começando pelo mais novo
+git log -p <file> - mostrar mudanças ao longo do tempo para um arquivo específico
+git blame <file> - mostrar quem alterou o quê e quando em <file>
+
+Branches
+git branch -av - listar todos os ramos existentes
+git checkout <branch> - mudar ramo HEAD
+git checkout <new-branch> - crie uma nova filial com base
+git chekout-track<remote/branch> - crie uma nova filial com a base
+git branc -d <branch> - deletar uma filial local
+git tag <tag-name> - marque o commit atual com uma tag
+
+Atualizar e publicar
+git remote -v - listar todos os controles remotos configurados atualmente
+git remote show <remote> - mostrar informações sobre um controle remoto
+git remote add<shortname> <url> - adicione um novo repositório remoto, denominado <remote>
+git fetch <remote> - baixe todas as alterações de <remote>, mas não integre no HEAD
+git pull <remote> <branch> - baixe as alterações e marque/integre diretamente no HEAD
+git push <remote> <branch> - publique as alterações locais remotamente.
+git branch -dh <remote/branch> - exclua uma filial no controle remoto
+git push --tags - publique suas tags
+
+Fundir & Rebase
+git merge <branch> - funda a <branch> em seu HEAD atual
+git rebase <branch> - rebase seu HEAD atual em <branch>
+git rebase --abort - abortar uma base
+git rebase --continue - continue um rebase após resolver os conflitos
+git mergetool - use a ferramenta de fusão configurada do tour para resolver conflitos
+git add <resolved-file git rm<resolved-file> - use o editor de tour para resolver conflitos manualmente e (após resolver) marcar o arquivo como resolvido.
+
+Desfazer
+git reset -hard HEAD - Descarte todas as mudanças locais em seu diretório de trabalho
+git checkout HEAD <file> - descartar as alterações locais em um arquivo específico
+git revert <commit> - reverter um commit (produzindo um novo commit com mudanças contrárias)
+git reset -hard <commit> - redefina o ponteiro HEAD para um commit anterior... e descarte todas as alterações desde então
+git reset <commit> ... e preserva todas as mudanças como mudanças não planejadas
+git reset -keep <commit> - ... e preserva todas as mudanças locais não comprometidas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
